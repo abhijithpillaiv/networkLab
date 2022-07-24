@@ -5,7 +5,7 @@
 #include<string.h> 
 void main() 
 { 
-int skt,nsd,len,len1,len2; 
+int skt,nsd,len; 
 char msg[30]; 
 
 struct sockaddr_in servaddr,cliaddr; 
