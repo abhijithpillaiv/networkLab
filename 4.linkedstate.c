@@ -78,16 +78,7 @@ void route(int start_node, int lim)
                 scanf("%d", &cost[i][j]);
             }
         }
-        printf("\nCost matrix is : \n");
-        for (i = 0; i < lim; i++)
-        {
-            for (j = 0; j < lim; j++)
-            {
-                printf("%d      ", cost[i][j]);
-            }
-            printf("\n");
-        }
-
+        
         // get nodes
         printf("\nEnter the starting node : ");
         scanf("%d", &start_node);
