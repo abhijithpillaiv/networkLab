@@ -35,20 +35,22 @@ void route(int start_node, int lim)
         }
         // check if a better path exists through nextnode
         visited[nextNode] = 1;
-        for (i = 0; i < lim; i++)
-            if (!visited[i])
+        for (i = 0; i < lim; i++){
+            if (!visited[i]){
                 if (min_distance + cost[nextNode][i] < distance[i])
                 {
                     distance[i] = min_distance + cost[nextNode][i];
                     prev[i] = nextNode;
                 }
+            }
+        }
         count++;
         // print the path and distance of each node
         for (i = 0; i < lim; i++)
         {
             if (i != start_node)
             {
-                printf("\n\nDistance of node %d => %d", i, distance[i]);
+                printf("\n\nDistance to node %d => %d", i, distance[i]);
                 printf("\nPath :: %d", i);
                 j = i;
                 do

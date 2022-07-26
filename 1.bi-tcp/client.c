@@ -6,14 +6,14 @@
 
 void main(){
     int skt;
-    char msg[10];
+    char msg[100];
     struct sockaddr_in clientadd,serveraddr;
 
     // socket creation
     skt=socket(AF_INET,SOCK_STREAM,0);
     serveraddr.sin_family=AF_INET;
     serveraddr.sin_addr.s_addr=htonl(INADDR_ANY);
-    serveraddr.sin_port=htons(33345);
+    serveraddr.sin_port=htons(33341);
 
 if (skt)
 {
@@ -22,7 +22,7 @@ if (skt)
     
     // Input message and clr garbages
     printf("\ntype :: ");
-    fgets(msg,20,stdin);
+    fgets(msg,sizeof(msg),stdin);
     int len = strlen(msg);
     msg[len-1]='\0';
     
